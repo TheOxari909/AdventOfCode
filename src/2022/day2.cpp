@@ -1,5 +1,5 @@
-#include "../../include/day2.h"
-#include "../../include/common.h"
+#include "day2.h"
+#include "../common/common.h"
 
 void day2part1() {
     return;

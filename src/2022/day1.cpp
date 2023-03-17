@@ -1,5 +1,5 @@
-#include "../../include/day1.h"
-#include "../../include/common.h"
+#include "day1.h"
+#include "../common/common.h"
 #include <array>
 #include <numeric>
 

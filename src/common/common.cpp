@@ -1,4 +1,4 @@
-#include "../../include/common.h"
+#include "common.h"
 
 std::ifstream open_file(const std::string& filename) {
     std::ifstream file(filename);
