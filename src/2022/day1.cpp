@@ -1,5 +1,5 @@
 #include "day1.h"
-#include "../common/common.h"
+#include "common.h"
 #include <array>
 #include <numeric>
 
@@ -10,11 +10,11 @@ std::array<int, 3> loop_through() {
     int second_highest{ 0 };
     int third_highest{ 0 };
     int to_compare{ };
-    
+
     std::ifstream input = open_file(filename);
 
     for ( std::string line; getline( input, line ); ) {
-        if (line[0] != 0) {
+        if (!line.empty()) {
             to_compare += std::stoi(line);
             continue;
         }
@@ -27,7 +27,7 @@ std::array<int, 3> loop_through() {
             third_highest = second_highest;
             second_highest = to_compare;
         } else if (to_compare > third_highest) third_highest = to_compare;
-        
+
         to_compare = 0;
     }
 

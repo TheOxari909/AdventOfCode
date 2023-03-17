@@ -1,10 +1,12 @@
 cmake_minimum_required(VERSION 3.20)
-set(CMAKE_CXX_STANDARD 23)
+set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 add_compile_options(
   -pedantic-errors -Wall -Weffc++ -Wextra -Wsign-conversion -Werror
 )
+
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 project(AdventOfCode)
 
@@ -15,4 +17,4 @@ add_executable(main
   main.cpp
 )
 
-target_include_directories(main PRIVATE include)
+include_directories(include)

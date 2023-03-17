@@ -1,23 +1,9 @@
+#include "main.h"
+#include "problems.h"
 #include <iostream>
 #include <vector>
 #include <string>
 #include <chrono>
-#include "include/problems.h"
-
-// Define the function signature for each Advent of Code problem
-using AoCFunction = void(*)();
-
-struct AoCProblem {
-    std::string name;
-    AoCFunction function;
-};
-
-std::vector<AoCProblem> problems {
-    {"2022-d1-p1", &day1part1},
-    {"2022-d1-p2", &day1part2},
-    {"2022-d2-p1", &day2part1},
-    {"2022-d2-p1", &day2part2},
-};
 
 int main(int argc, char** argv) {
     if (argc == 1) {
