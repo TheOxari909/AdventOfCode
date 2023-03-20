@@ -1,15 +1,14 @@
 #include "day1.h"
 #include "common.h"
-#include <array>
 #include <numeric>
-
-const std::string filename = "../input/day1.txt";
 
 std::array<int, 3> loop_through() {
     int highest{ 0 };
     int second_highest{ 0 };
     int third_highest{ 0 };
     int to_compare{ };
+
+    std::string filename{ if_exists("../input/day1.txt") ? "../input/day1.txt" : "../testinput/day1.txt" };
 
     std::ifstream input = open_file(filename);
 

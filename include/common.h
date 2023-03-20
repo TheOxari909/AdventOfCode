@@ -3,8 +3,9 @@
 
 #include <fstream>
 #include <iostream>
-#include <cstring>
+#include <string>
 
-std::ifstream open_file(const std::string& filename); 
+bool if_exists(const std::string& name);
+std::ifstream open_file(const std::string& filename);
 
 #endif

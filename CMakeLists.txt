@@ -1,20 +1,18 @@
-cmake_minimum_required(VERSION 3.20)
-set(CMAKE_CXX_STANDARD 20)
-set(CMAKE_CXX_STANDARD_REQUIRED True)
+cmake_minimum_required(VERSION 3.0.0)
+project(AdventOfCode VERSION 0.1.0)
 
 add_compile_options(
   -pedantic-errors -Wall -Weffc++ -Wextra -Wsign-conversion -Werror
 )
 
-set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
-
-project(AdventOfCode)
-
-add_executable(main 
+add_executable(AdventOfCode 
   src/common/common.cpp
   src/2022/day1.cpp
   src/2022/day2.cpp
   main.cpp
 )
+
+set(CPACK_PROJECT_NAME ${PROJECT_NAME})
+set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
 
 include_directories(include)
